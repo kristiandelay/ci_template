@@ -25,7 +25,7 @@ foreach ($db as $connection_name => $db_values) {
 }
 
 // CodeIgniter's Model class needs to be loaded
-require_once BASEPATH.'/libraries/Model.php';
+require_once BASEPATH.'/system/core/Model.php';
 
 // telling Doctrine where our models are located
 Doctrine::loadModels(APPPATH.'/models');
