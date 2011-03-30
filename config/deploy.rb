@@ -11,7 +11,7 @@
 # form the root of the application path.
 
 set :application, "ci_template"
-set :repository, "git@github.com/cleblanc87/ci_template.git"
+set :repository, "git@github.com:cleblanc87/ci_template.git"
 
 # =============================================================================
 # ROLES
@@ -22,7 +22,7 @@ set :repository, "git@github.com/cleblanc87/ci_template.git"
 # be used to single out a specific subset of boxes in a particular role, like
 # :primary => true.
 
-role :web, "http://localhost/"
+role :web, "localhost"
 
 # =============================================================================
 # OPTIONAL VARIABLES
@@ -94,8 +94,8 @@ desc "Demonstrates the various helper methods available to recipes."
 namespace :deploy do
   task :default do
     update
-    run "cp /home/ubuntu/public_html/system /home/ubuntu/public_html/current/system"
-    run "php /home/ubuntu/public_html/current/run-watchers.php"
+    run "cp -r /home/ubuntu/public_html/system /home/ubuntu/public_html/current/system"
+    run "php /home/ubuntu/public_html/current/run_watchers.php"
   end
 end
 

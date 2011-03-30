@@ -15,8 +15,8 @@
   function haml_watch() {
     //set our options, there are many to choose from
     //open the haml dir
-    $HAML['source_path'] = 'haml_source/';
-    $HAML['output_path'] = 'application/views/';
+    $HAML['source_path'] = '/home/ubuntu/public_html/haml_source/';
+    $HAML['output_path'] = '/home/ubuntu/public_html/application/views/';
 
     if ($handle = opendir($HAML['source_path'])) {
       //while we have files in the dir
