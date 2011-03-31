@@ -195,6 +195,7 @@
  * And away we go...
  *
  */
+require_once APPPATH.'application/config/database.php'.EXT;
 require_once BASEPATH.'core/CodeIgniter'.EXT;
 
 /* End of file index.php */
