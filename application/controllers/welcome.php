@@ -20,15 +20,19 @@ class Welcome extends CI_Controller {
 	public function index()
 	{
           $data['ci_msg_str'] = 'looks like we need to use the php tags unless we can incorporate tpl :O. Also inspect this element<? o cool php tags in the data array become comment s?>';
+
+	  $this->load->view('welcome_message', $data);
+	}
+
+        public function lolz()
+        {
           $u = new User;
           $u->username = 'johndoe';
 	  $u->password = 'secret';
 	  $u->first_name = 'John';
 	  $u->last_name = 'Doe';
 	  $u->save();
-
-	  $this->load->view('welcome_message', $data);
-	}
+        }
 }
 
 /* End of file welcome.php */

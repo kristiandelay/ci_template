@@ -2,7 +2,7 @@
 // system/application/plugins/doctrine_pi.php
 
 // load Doctrine library
-require_once APPPATH.'/helpers/doctrine/Doctrine.php';
+require_once APPPATH.'helpers/doctrine/Doctrine.php';
 
 // load database configuration from CodeIgniter
 require_once APPPATH.'/config/database.php';
@@ -25,7 +25,7 @@ foreach ($db as $connection_name => $db_values) {
 }
 
 // CodeIgniter's Model class needs to be loaded
-require_once BASEPATH.'system/core/Model.php';
+require_once BASEPATH.'core/Model.php';
 
 // telling Doctrine where our models are located
 Doctrine::loadModels(APPPATH.'/models');
