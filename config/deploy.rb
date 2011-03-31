@@ -11,7 +11,7 @@ namespace :deploy do
     transaction do
       update
       run "cp -r /home/ubuntu/public_html/current/* /home/ubuntu/public_html/"
-      run "php /home/ubuntu/public_html/run_watchers.php"
+      run "php /home/ubuntu/public_html/libraries/run_watchers.php"
     end
   end
 end
