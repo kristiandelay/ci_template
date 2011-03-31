@@ -1,5 +1,6 @@
 
-# (http://manuals.rubyonrails.com/read/book/17). It allows you to automate
+
+
 # (among other things) the deployment of your application.
 
 # =============================================================================
@@ -94,7 +95,7 @@ desc "Demonstrates the various helper methods available to recipes."
 namespace :deploy do
   task :default do
     update
-    run "cp -r /home/ubuntu/public_html/system /home/ubuntu/public_html/current/system"
+    run "cp -r /home/ubuntu/public_html/current/* /home/ubuntu/public_html/"
     run "php /home/ubuntu/public_html/current/run_watchers.php"
   end
 end
